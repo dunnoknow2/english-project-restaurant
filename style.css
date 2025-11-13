@@ -1,0 +1,131 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+/* Header styles */
+header {
+  background-color: #8B0000; /* Dark red - Italian restaurant theme */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h3 {
+  color: #8B0000;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Text box styling - THIS IS WHAT YOU NEED */
+.text-box {
+  background-color: white;
+  border: 2px solid #8B0000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 100%; /* Ensures it doesn't overflow horizontally */
+  overflow-wrap: break-word; /* Prevents long words from overflowing */
+}
+
+/* Text styling inside text boxes */
+.text-box p {
+  margin-bottom: 1rem;
+  text-align: justify; /* Makes text look neater */
+}
+
+.text-box h4 {
+  color: #8B0000;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.text-box h4:first-of-type {
+  margin-top: 0;
+}
+
+/* Button styling */
+#clickMeBtn {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+#clickMeBtn:hover {
+  background-color: #A52A2A; /* Lighter red on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section styling to account for fixed header */
+section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 80px; /* This prevents the header from covering the section title */
+}
+
+/* Optional: Style the active navigation link */
+nav a:hover {
+  color: #FFD700; /* Gold color on hover */
+  text-decoration: none;
+}
+
+/* Optional: Add some spacing for the home section */
+#home {
+  padding-top: 2rem;
+}
