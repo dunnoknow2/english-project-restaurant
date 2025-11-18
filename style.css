@@ -9,15 +9,42 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f8f8f8;
+  background-color: #f7d4b4;
 }
 
-
+/* Header styles */
 header {
-  background-color: #8B0000; 
-  color: white;
+  background-color: #8B0000;
+  color: rgb(255, 255, 255);
   padding: 1rem;
   text-align: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo-title h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: white;
 }
 
 nav ul {
@@ -34,9 +61,6 @@ nav a {
   font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
 
 /* Main content */
 main {
@@ -47,6 +71,7 @@ main {
 
 section {
   margin-bottom: 3rem;
+  scroll-margin-top: 80px;
 }
 
 h3 {
@@ -55,7 +80,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-
+/* Text box styling */
 .text-box {
   background-color: white;
   border: 2px solid #8B0000;
@@ -64,13 +89,12 @@ h3 {
   margin: 1rem 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   max-width: 100%;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
 }
-
 
 .text-box p {
   margin-bottom: 1rem;
-  text-align: justify; 
+  text-align: justify;
 }
 
 .text-box h4 {
@@ -82,7 +106,144 @@ h3 {
   margin-top: 0;
 }
 
+/* Two Column Section */
+.two-column-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
 
+.column h3 {
+  text-align: center;
+}
+
+/* Collapsible Styles */
+.collapsible-header {
+  background-color: #8B0000;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  margin-bottom: 0.5rem;
+}
+
+.collapsible-header:hover {
+  background-color: #A52A2A;
+}
+
+.collapsible-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.collapse-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible-content.active {
+  max-height: 2000px;
+}
+
+.collapsible-header.active .collapse-icon {
+  transform: rotate(45deg);
+}
+
+/* Special boxes for daily specials */
+.special-box {
+  background-color: white;
+  border: 2px solid #8B0000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.special-box h4 {
+  color: #8B0000;
+  margin-bottom: 0.5rem;
+}
+
+/* Jobs Section Styles */
+.job-position {
+  background-color: #f8f8f8;
+  border-left: 4px solid #8B0000;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.job-position h5 {
+  color: #8B0000;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.job-position p {
+  margin-bottom: 0.5rem;
+}
+
+.apply-btn {
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #A52A2A;
+}
+
+.job-benefits {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.job-benefits h4 {
+  color: #8B0000;
+  margin-bottom: 1rem;
+}
+
+.job-benefits ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.job-benefits li {
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.job-benefits li:before {
+  content: "✓";
+  color: #8B0000;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Button styling */
 #clickMeBtn {
   background-color: #8B0000;
   color: white;
@@ -97,7 +258,36 @@ h3 {
 }
 
 #clickMeBtn:hover {
-  background-color: #A52A2A; 
+  background-color: #A52A2A;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: none;
+}
+
+.scroll-top-btn:hover {
+  background-color: #A52A2A;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-top-btn:active {
+  transform: translateY(-1px);
 }
 
 /* Footer */
@@ -109,24 +299,35 @@ footer {
   margin-top: 2rem;
 }
 
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-
-section {
-  margin-bottom: 3rem;
-  scroll-margin-top: 80px; 
-}
-
-
-nav a:hover {
-  color: #FFD700; 
-  text-decoration: none;
-}
-
-
-#home {
-  padding-top: 2rem;
-
+/* Responsive design */
+@media (max-width: 768px) {
+  .two-column-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .logo-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .logo-title h1 {
+    font-size: 1.8rem;
+  }
 }
